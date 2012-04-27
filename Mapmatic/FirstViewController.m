@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "UIImage+FixOrientation.h"
 
 @implementation FirstViewController
 
@@ -67,7 +68,9 @@
 
 - (IBAction)postSpot:(id)sender
 {
-    NSString *location = [self stringFromLocation:_locmgr.location];    
+    [self updateStatus:@"Posting..." withSpin:YES];
+
+    NSString *location = [self stringFromLocation:_locmgr.location];
     NSData *imgdata = UIImagePNGRepresentation(self.view_image.image);
     
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -78,7 +81,6 @@
                           imgdata, @"spot[image]",
                           nil];
     
-    [self updateStatus:@"Posting..." withSpin:YES];
     [self httpPostWithDictionary:dict];
 }
 
@@ -194,16 +196,14 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    NSLog(@"picker: %@", picker);
-    NSLog(@"got media: %@", info);
     [picker dismissModalViewControllerAnimated:YES];
     
-    self.view_image.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.view_image.image = [img fixOrientation];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    NSLog(@"picker canceled");
     [picker dismissModalViewControllerAnimated:YES];
 }
 

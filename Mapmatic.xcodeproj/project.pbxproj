@@ -19,6 +19,7 @@
 		279AACD8154921A600AE35C2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279AACD7154921A600AE35C2 /* SecondViewController.m */; };
 		279AACDB154921A600AE35C2 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279AACD9154921A600AE35C2 /* FirstView.xib */; };
 		279AACDE154921A600AE35C2 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279AACDC154921A600AE35C2 /* SecondView.xib */; };
+		27F40F11154A217700AC3793 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F40F10154A217700AC3793 /* UIImage+FixOrientation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		279AACD7154921A600AE35C2 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		279AACDA154921A600AE35C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
 		279AACDD154921A600AE35C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+		27F40F0F154A217700AC3793 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		27F40F10154A217700AC3793 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,11 +93,13 @@
 			children = (
 				279AACCD154921A600AE35C2 /* MapmaticAppDelegate.h */,
 				279AACCE154921A600AE35C2 /* MapmaticAppDelegate.m */,
-				279AACD0154921A600AE35C2 /* MainWindow.xib */,
+				27F40F0F154A217700AC3793 /* UIImage+FixOrientation.h */,
+				27F40F10154A217700AC3793 /* UIImage+FixOrientation.m */,
 				279AACD3154921A600AE35C2 /* FirstViewController.h */,
 				279AACD4154921A600AE35C2 /* FirstViewController.m */,
 				279AACD6154921A600AE35C2 /* SecondViewController.h */,
 				279AACD7154921A600AE35C2 /* SecondViewController.m */,
+				279AACD0154921A600AE35C2 /* MainWindow.xib */,
 				279AACD9154921A600AE35C2 /* FirstView.xib */,
 				279AACDC154921A600AE35C2 /* SecondView.xib */,
 				279AACC5154921A600AE35C2 /* Supporting Files */,
@@ -181,6 +186,7 @@
 				279AACCF154921A600AE35C2 /* MapmaticAppDelegate.m in Sources */,
 				279AACD5154921A600AE35C2 /* FirstViewController.m in Sources */,
 				279AACD8154921A600AE35C2 /* SecondViewController.m in Sources */,
+				27F40F11154A217700AC3793 /* UIImage+FixOrientation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
